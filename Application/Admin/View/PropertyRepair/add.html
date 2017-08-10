@@ -1,0 +1,71 @@
+<extend name="Public/base"/>
+
+<block name="body">
+	<div class="main-title">
+		<h2>
+			{$info['id']?'编辑':'新增'}报修
+			<notempty name="pid">
+				[&nbsp;父导航：<a href="{:U('index','pid='.$pid)}">{$parent.title}</a>&nbsp;]
+			</notempty>
+		</h2>
+	</div>
+	<form action="{:U()}" method="post" class="form-horizontal">
+		<!--<input type="hidden" name="pid" value="{$pid}">-->
+		<div class="form-item">
+			<label class="item-label">订单号<span class="check-tips"></span></label>
+			<div class="controls">
+				<input type="text" class="text input-small" name="sn" value="{$info.sn|default=''}">
+			</div>
+		</div>
+		<div class="form-item">
+			<label class="item-label">姓名<span class="check-tips">（报修人）</span></label>
+			<div class="controls">
+				<input type="text" class="text input-small" name="user" value="{$info.user|default=''}">
+			</div>
+		</div>
+		<div class="form-item">
+			<label class="item-label">电话<span class="check-tips"></span></label>
+			<div class="controls">
+				<input type="text" class="text input-small" name="tel" value="{$info.tel|default=''}">
+			</div>
+		</div>
+		<div class="form-item">
+			<label class="item-label">地址<span class="check-tips">（问题发生地）</span></label>
+			<div class="controls">
+				<input type="text" class="text input-large" name="address" value="{$info.address|default=''}">
+			</div>
+		</div>
+		<div class="form-item">
+			<label class="item-label">问题<span class="check-tips">（或故障）</span></label>
+			<div class="controls">
+				<input type="text" class="text input-large" name="problem" value="{$info.problem|default=''}">
+			</div>
+		</div>
+		<div class="form-item">
+			<label class="item-label">订单状态<span class="check-tips"></span></label>
+			<div class="controls">
+				<select name="status">
+					<option value="0" <eq name="info.status" value="0" >selected</eq>>处理中</option>
+					<option value="1" <eq name="info.status" value="1" >selected</eq>>处理完成</option>
+				</select>
+			</div>
+		</div>
+		<!--<div class="form-item">
+			<label class="item-label">报修时间<span class="check-tips"></span></label>
+			<div class="controls">
+				<input type="text" name="create_time" class="text time" value="2017-08-10 11:11" placeholder="请选择时间">
+			</div>
+		</div>-->
+		<div class="form-item">
+			<input type="hidden" name="id" value="{$info.id|default=''}">
+			<button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定</button>
+			<button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+		</div>
+	</form>
+</block>
+<block name="script">
+<script type="text/javascript" charset="utf-8">
+	//导航高亮
+	highlight_subnav('{:U('index')}');
+</script>
+</block>
