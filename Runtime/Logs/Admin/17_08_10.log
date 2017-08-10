@@ -9935,3 +9935,1401 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.006000s ]
 
+[ 2017-08-10T23:24:36+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-08-10T23:24:37+08:00 ] 127.0.0.1 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] unserialize(): Error at offset 0 of 1875 bytes D:\www\weixin.wmz\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 104 行.
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0060s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T23:24:37+08:00 ] 127.0.0.1 /admin.php?s=/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T23:24:53+08:00 ] 127.0.0.1 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: lite D:\www\weixin.wmz\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0060s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `member` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `action` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] unserialize(): Error at offset 0 of 31 bytes D:\www\weixin.wmz\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 104 行.
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0180s ]
+SQL: SELECT `nickname` FROM `member` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `action_log` [ RunTime:0.0200s ]
+SQL: INSERT INTO `action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('1','1','2130706433','member','1','1502378693','wmzibji在2017-08-10 23:24登录了后台') [ RunTime:0.0010s ]
+SQL: SELECT * FROM `action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 1 D:\www\weixin.wmz\Application\Common\Common\function.php 第 679 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given D:\www\weixin.wmz\Application\Common\Common\function.php 第 679 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `action_log` WHERE `action_id` = 1 AND `user_id` = 1 AND `create_time` > 1502292293 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `member` SET `login`=`login`+1,`last_login_time`='1502378693',`last_login_ip`='2130706433' WHERE `uid` = 1 [ RunTime:0.0010s ]
+
+[ 2017-08-10T23:24:53+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `addons` [ RunTime:0.0050s ]
+SQL: SELECT `config` FROM `addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `member` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `action_log` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `action_log` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `document` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `category` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `model` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.059004s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.058004s ]
+SQL: SELECT `config` FROM `addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.208012s ]
+SQL: select version() as v; [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.134007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.150008s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.150008s ]
+SQL: SELECT `config` FROM `addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.220013s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.158009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.161009s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.011001s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.219013s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.158009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.161009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T23:25:04+08:00 ] 127.0.0.1 /admin.php?s=/Article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Article/index%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 2 AND `hide` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '内容' AND `pid` = 2 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.0200s ]
+SQL: SELECT `extend_id` FROM auth_group_access g INNER JOIN auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='1' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0190s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish` FROM `category` WHERE `status` = 1 ORDER BY pid,sort  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `model` WHERE `name` = 'document' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0180s ]
+SQL: SELECT COUNT(*) AS tp_count FROM document DOCUMENT WHERE `status` IN ('0','1','2') AND `pid` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`type`,`update_time`,`status`,`view`,`category_id`,`model_id`,`pid` FROM document DOCUMENT WHERE `status` IN ('0','1','2') AND `pid` = 0 ORDER BY level DESC,DOCUMENT.id DESC LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `extend` FROM `model` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0150s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `attribute` WHERE `model_id` = 1  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: groups D:\www\weixin.wmz\Application\Admin\Controller\ArticleController.class.php 第 231 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.078005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T23:25:27+08:00 ] 127.0.0.1 /admin.php?s=/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0180s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0020s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%User/index%' ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0020s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0180s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-08-10T23:25:32+08:00 ] 127.0.0.1 /admin.php?s=/AuthManager/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%AuthManager/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `auth_group` WHERE `module` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`module`,`type`,`title`,`description`,`status`,`rules` FROM `auth_group` WHERE `module` = 'admin' ORDER BY id asc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-08-10T23:25:43+08:00 ] 127.0.0.1 /admin.php?s=/User/action.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%User/action%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `action` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `action` WHERE `status` >= 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`title`,`remark`,`rule`,`log`,`type`,`status`,`update_time` FROM `action` WHERE `status` >= 0 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-08-10T23:26:03+08:00 ] 127.0.0.1 /admin.php?s=/Action/actionlog.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Action/actionlog%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `action_log` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `action_log` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`remark`,`status`,`create_time` FROM `action_log` WHERE `status` > -1 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0050s ]
+SQL: SELECT `id` FROM `model` WHERE `name` = 'member' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `model` WHERE `name` = 'member' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `model` WHERE `name` = 'Menu' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `model` WHERE `name` = 'channel' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `model` WHERE `name` = 'Menu' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `model` WHERE `name` = 'Menu' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `model` WHERE `name` = 'Menu' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `model` WHERE `name` = 'Menu' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `model` WHERE `name` = 'Menu' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `model` WHERE `name` = 'Menu' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `action` [ RunTime:0.0160s ]
+SQL: SELECT `id`,`name`,`title`,`remark`,`rule`,`log`,`type`,`status`,`update_time` FROM `action` WHERE `status` > -1 AND `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`title`,`remark`,`rule`,`log`,`type`,`status`,`update_time` FROM `action` WHERE `status` > -1 AND `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`title`,`remark`,`rule`,`log`,`type`,`status`,`update_time` FROM `action` WHERE `status` > -1 AND `id` = 10 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`title`,`remark`,`rule`,`log`,`type`,`status`,`update_time` FROM `action` WHERE `status` > -1 AND `id` = 9 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`title`,`remark`,`rule`,`log`,`type`,`status`,`update_time` FROM `action` WHERE `status` > -1 AND `id` = 10 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`title`,`remark`,`rule`,`log`,`type`,`status`,`update_time` FROM `action` WHERE `status` > -1 AND `id` = 10 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`title`,`remark`,`rule`,`log`,`type`,`status`,`update_time` FROM `action` WHERE `status` > -1 AND `id` = 10 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name`,`title`,`remark`,`rule`,`log`,`type`,`status`,`update_time` FROM `action` WHERE `status` > -1 AND `id` = 10 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`title`,`remark`,`rule`,`log`,`type`,`status`,`update_time` FROM `action` WHERE `status` > -1 AND `id` = 10 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`title`,`remark`,`rule`,`log`,`type`,`status`,`update_time` FROM `action` WHERE `status` > -1 AND `id` = 10 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.074004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.074004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-08-10T23:26:11+08:00 ] 127.0.0.1 /admin.php?s=/Config/group.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Config/group%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `config` WHERE `status` = 1 AND `group` = 1 ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T23:26:58+08:00 ] 127.0.0.1 /admin.php?s=/Config/save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Config/save%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 70 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0050s ]
+SQL: UPDATE `config` SET `value`='物业管理' WHERE `name` = 'WEB_SITE_TITLE' [ RunTime:0.0000s ]
+SQL: UPDATE `config` SET `value`='物业管理' WHERE `name` = 'WEB_SITE_DESCRIPTION' [ RunTime:0.0000s ]
+SQL: UPDATE `config` SET `value`='1' WHERE `name` = 'WEB_SITE_CLOSE' [ RunTime:0.0000s ]
+SQL: UPDATE `config` SET `value`='weixin' WHERE `name` = 'WEB_SITE_KEYWORD' [ RunTime:0.0000s ]
+SQL: UPDATE `config` SET `value`='' WHERE `name` = 'WEB_SITE_ICP' [ RunTime:0.0000s ]
+SQL: UPDATE `config` SET `value`='blue_color' WHERE `name` = 'COLOR_STYLE' [ RunTime:0.0000s ]
+
+[ 2017-08-10T23:26:59+08:00 ] 127.0.0.1 /admin.php?s=/Config/group.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Config/group%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `config` WHERE `status` = 1 AND `group` = 1 ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-08-10T23:27:04+08:00 ] 127.0.0.1 /admin.php?s=/Config/save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Config/save%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 70 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0050s ]
+SQL: UPDATE `config` SET `value`='物业管理' WHERE `name` = 'WEB_SITE_TITLE' [ RunTime:0.0000s ]
+SQL: UPDATE `config` SET `value`='物业管理' WHERE `name` = 'WEB_SITE_DESCRIPTION' [ RunTime:0.0000s ]
+SQL: UPDATE `config` SET `value`='1' WHERE `name` = 'WEB_SITE_CLOSE' [ RunTime:0.0000s ]
+SQL: UPDATE `config` SET `value`='weixin' WHERE `name` = 'WEB_SITE_KEYWORD' [ RunTime:0.0000s ]
+SQL: UPDATE `config` SET `value`='' WHERE `name` = 'WEB_SITE_ICP' [ RunTime:0.0000s ]
+SQL: UPDATE `config` SET `value`='default_color' WHERE `name` = 'COLOR_STYLE' [ RunTime:0.0000s ]
+
+[ 2017-08-10T23:27:05+08:00 ] 127.0.0.1 /admin.php?s=/Config/group.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Config/group%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `config` WHERE `status` = 1 AND `group` = 1 ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T23:27:08+08:00 ] 127.0.0.1 /admin.php?s=/Config/group/id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Config/group%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `config` WHERE `status` = 1 AND `group` = 2 ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T23:27:36+08:00 ] 127.0.0.1 /admin.php?s=/Config/group/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0180s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0020s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Config/group%' ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0020s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0230s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `config` WHERE `status` = 1 AND `group` = 3 ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-08-10T23:27:41+08:00 ] 127.0.0.1 /admin.php?s=/Config/group/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Config/group%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `config` WHERE `status` = 1 AND `group` = 4 ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T23:28:41+08:00 ] 127.0.0.1 /admin.php?s=/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Category/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`name`,`title`,`sort`,`pid`,`allow_publish`,`status` FROM `category` WHERE `status` > -1 ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.018001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.021001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T23:28:52+08:00 ] 127.0.0.1 /admin.php?s=/Model/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Model/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `model` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`attribute_alias`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `model` WHERE `status` > -1 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T23:29:07+08:00 ] 127.0.0.1 /admin.php?s=/think/lists/model/propertyrepair.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Declaration of Admin\Controller\ThinkController::lists($model = NULL, $p = 0) should be compatible with Admin\Controller\AdminController::lists($model, $where = Array, $order = '', $field = true) D:\www\weixin.wmz\Application\Admin\Controller\ThinkController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Think/lists%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 58 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `model` WHERE `name` = 'propertyrepair' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `model` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'weixin.wmz.com.propertyrepair' doesn't exist
+
+[ 2017-08-10T23:29:16+08:00 ] 127.0.0.1 /admin.php?s=/model/edit/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Model/edit%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 58 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`attribute_alias`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `model` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0190s ]
+SQL: SELECT `id`,`name`,`title`,`is_show` FROM `attribute` WHERE `model_id` = 4  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-08-10T23:30:07+08:00 ] 127.0.0.1 /admin.php?s=/Model/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Model/index%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `model` WHERE `status` > -1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`attribute_alias`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `model` WHERE `status` > -1 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T23:30:09+08:00 ] 127.0.0.1 /admin.php?s=/think/lists/model/propertyrepair.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Declaration of Admin\Controller\ThinkController::lists($model = NULL, $p = 0) should be compatible with Admin\Controller\AdminController::lists($model, $where = Array, $order = '', $field = true) D:\www\weixin.wmz\Application\Admin\Controller\ThinkController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Think/lists%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 58 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `model` WHERE `name` = 'propertyrepair' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `model` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'weixin.wmz.com.propertyrepair' doesn't exist
+
+[ 2017-08-10T23:30:20+08:00 ] 127.0.0.1 /admin.php?s=/model/edit/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Model/edit%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 58 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`attribute_alias`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `model` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`name`,`title`,`is_show` FROM `attribute` WHERE `model_id` = 4  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T23:30:34+08:00 ] 127.0.0.1 /admin.php?s=/Model/update.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Model/update%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 58 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0060s ]
+
+[ 2017-08-10T23:30:50+08:00 ] 127.0.0.1 /admin.php?s=/model/edit/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Model/edit%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 58 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`attribute_alias`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `model` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`name`,`title`,`is_show` FROM `attribute` WHERE `model_id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`title`,`is_show` FROM `attribute` WHERE `model_id` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T23:31:05+08:00 ] 127.0.0.1 /admin.php?s=/model/edit/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.006000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0310s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Model/edit%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 58 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`attribute_alias`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `model` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`name`,`title`,`is_show` FROM `attribute` WHERE `model_id` = 4  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 137 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+NOTIC: [8] Undefined index: group D:\www\weixin.wmz\Runtime\Cache\Admin\4bc4913b407324fb4d494724d5710d65.php 第 163 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-08-10T23:31:25+08:00 ] 127.0.0.1 /admin.php?s=/Config/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Config/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `config` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`type`,`title`,`group`,`extra`,`remark`,`create_time`,`update_time`,`status`,`value`,`sort` FROM `config` WHERE `status` = 1 ORDER BY sort,id LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T23:31:30+08:00 ] 127.0.0.1 /admin.php?s=/Config/edit/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Config/edit%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 70 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`name`,`type`,`title`,`group`,`extra`,`remark`,`create_time`,`update_time`,`status`,`value`,`sort` FROM `config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T23:31:35+08:00 ] 127.0.0.1 /admin.php?s=/Menu/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Menu/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `menu`  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pid`,`sort`,`url`,`hide`,`tip`,`group`,`is_dev`,`status` FROM `menu` WHERE `pid` = 0 ORDER BY sort asc,id asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-08-10T23:31:51+08:00 ] 127.0.0.1 /admin.php?s=/Channel/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Channel/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `channel` WHERE `status` > -1 AND `pid` = 0 ORDER BY sort asc,id asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-08-10T23:32:23+08:00 ] 127.0.0.1 /admin.php?s=/Addons/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `addons` [ RunTime:0.0050s ]
+SQL: SELECT `title`,`name` FROM `addons` WHERE ( status=1 AND has_adminlist=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Addons/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 43 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 43  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 43 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '扩展' AND `pid` = 43 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`author`,`version`,`create_time`,`has_adminlist` FROM `addons` WHERE `name` IN ('Attachment','DevTeam','Editor','EditorForAdmin','SiteStat','SocialComment','SystemInfo')  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `addons` [ RunTime:0.0190s ]
+SQL: SELECT `config` FROM `addons` WHERE `name` = 'EditorForAdmin' AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `config` FROM `addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `config` FROM `addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `config` FROM `addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `config` FROM `addons` WHERE `name` = 'Editor' AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `config` FROM `addons` WHERE `name` = 'Attachment' AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `config` FROM `addons` WHERE `name` = 'SocialComment' AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.125007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.125007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-08-10T23:32:30+08:00 ] 127.0.0.1 /admin.php?s=/PropertyRepair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%PropertyRepair/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 124 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 124  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 124 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '物业管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `property_repair` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `property_repair` ORDER BY id asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: pid D:\www\weixin.wmz\Runtime\Cache\Admin\effd63d4ad65368d786cdaa77b38ac67.php 第 93 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T23:55:28+08:00 ] 127.0.0.1 /admin.php?s=/Config/group.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Config/group%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `config` WHERE `status` = 1 AND `group` = 1 ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-08-10T23:55:31+08:00 ] 127.0.0.1 /admin.php?s=/Channel/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Channel/index%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `channel` WHERE `status` > -1 AND `pid` = 0 ORDER BY sort asc,id asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-08-10T23:55:36+08:00 ] 127.0.0.1 /admin.php?s=/Channel/add/pid/0.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Channel/add%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 76 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-08-10T23:56:12+08:00 ] 127.0.0.1 /admin.php?s=/Channel/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Channel/add%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 76 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0050s ]
+SQL: INSERT INTO `channel` (`pid`,`title`,`url`,`target`,`sort`,`id`,`create_time`,`update_time`,`status`) VALUES ('0','登录','User/login','0','0','0','1502380571','1502380571','1') [ RunTime:0.0000s ]
+
+[ 2017-08-10T23:56:13+08:00 ] 127.0.0.1 /admin.php?s=/Channel/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Channel/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `channel` WHERE `status` > -1 AND `pid` = 0 ORDER BY sort asc,id asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-08-10T23:56:52+08:00 ] 127.0.0.1 /admin.php?s=/Channel/edit/id/5/pid/0.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Channel/edit%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 76 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `channel` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T23:57:17+08:00 ] 127.0.0.1 /admin.php?s=/Channel/edit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Channel/edit%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 76 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0040s ]
+SQL: UPDATE `channel` SET `pid`='0',`title`='登录',`url`='Home/User/login',`target`='0',`sort`='0',`update_time`='1502380637' WHERE `id` = 5 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `action` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `action` WHERE `name` = 'update_channel' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `action_log` [ RunTime:0.0060s ]
+SQL: INSERT INTO `action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('9','1','2130706433','channel','5','1502380637','操作url：/admin.php?s=/Channel/edit.html') [ RunTime:0.0010s ]
+
+[ 2017-08-10T23:57:18+08:00 ] 127.0.0.1 /admin.php?s=/Channel/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0160s ]
+SQL: SELECT `id`,`title`,`url` FROM `menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0020s ]
+SQL: SELECT `pid` FROM `menu` WHERE ( pid !=0 AND url like '%Channel/index%' ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0020s ]
+SQL: SELECT `id`,`url` FROM `menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0020s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `channel` [ RunTime:0.0250s ]
+SQL: SELECT * FROM `channel` WHERE `status` > -1 AND `pid` = 0 ORDER BY sort asc,id asc  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007000s ]
+
