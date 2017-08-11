@@ -13,7 +13,7 @@ class PropertyRepairController extends AdminController {
      */
     public function index(){
         /* 获取报修订单列表 */
-        $list = M('PropertyRepair')->order('id asc')->select();
+        $list =  $this->lists('PropertyRepair');
         $this->assign('list', $list);
         $this->meta_title = '报修管理';
         $this->display();

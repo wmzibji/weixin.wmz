@@ -18,7 +18,14 @@ class UserController extends HomeController {
 
 	/* 用户中心首页 */
 	public function index(){
-		
+        if ( !is_login() ) {
+            $this->redirect( 'User/login');
+        }
+        $id=
+        $user=M('UcenterMember')->where(['id'=>1])->select();
+        $this->assign('user',$user);
+        $this->display();
+
 	}
 
 	/* 注册页面 */

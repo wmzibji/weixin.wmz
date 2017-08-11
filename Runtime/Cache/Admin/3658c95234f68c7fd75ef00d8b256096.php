@@ -93,12 +93,12 @@
 	</div>
 	<form action="<?php echo U();?>" method="post" class="form-horizontal">
 		<!--<input type="hidden" name="pid" value="<?php echo ($pid); ?>">-->
-		<div class="form-item">
+		<!--<div class="form-item">
 			<label class="item-label">订单号<span class="check-tips"></span></label>
 			<div class="controls">
 				<input type="text" class="text input-small" name="sn" value="<?php echo ((isset($info["sn"]) && ($info["sn"] !== ""))?($info["sn"]):''); ?>">
 			</div>
-		</div>
+		</div>-->
 		<div class="form-item">
 			<label class="item-label">姓名<span class="check-tips">（报修人）</span></label>
 			<div class="controls">

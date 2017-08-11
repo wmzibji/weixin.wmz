@@ -132,6 +132,10 @@
                 <td colspan="6" class="text-center"> aOh! 暂时还没有内容! </td><?php endif; ?>
             </tbody>
         </table>
+        <!-- 分页 -->
+        <div class="page">
+            <?php echo ($_page); ?>
+        </div>
     </div>
 
         </div>

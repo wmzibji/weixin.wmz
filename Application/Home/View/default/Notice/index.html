@@ -1,0 +1,16 @@
+<extend name="Base/base" />
+<block name="main">
+<div class="container">
+    <div class="blank"></div>
+    <div>
+        <h2>小区通知</h2>
+        <ul class="list-group fuwuList">
+            <notempty name="list">
+                <volist name="list" id="document">
+            <li class="list-group-item"><a href="{：U('Notice/detail')}" class="text-info"><span class="iconfont">&#xe60a;</span>{$document.title}</a> </li>
+                </volist>
+            </notempty>
+        </ul>
+    </div>
+</div>
+</block>
