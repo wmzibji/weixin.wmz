@@ -11,5 +11,16 @@ class NoticeController extends HomeController {
         $this->display();
 
     }
+    public function detail(){
+        $list=M('document')->select();
+        $this->assign('list',$list);
+        $this->meta_title = '小区通知';
+        $this->display();
 
+    }
+    public function dom(){
+
+        $this->display();
+
+    }
 }

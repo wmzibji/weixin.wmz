@@ -54,7 +54,7 @@
     <div>
         <h2>小区通知</h2>
         <ul class="list-group fuwuList">
-            <?php if(!empty($list)): if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$document): $mod = ($i % 2 );++$i;?><li class="list-group-item"><a href="diaochawenjuan.html" class="text-info"><span class="iconfont">&#xe60a;</span><?php echo ($document["title"]); ?></a> </li><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+            <?php if(!empty($list)): if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$document): $mod = ($i % 2 );++$i;?><li class="list-group-item"><a href="{：U('Notice/detail')}" class="text-info"><span class="iconfont">&#xe60a;</span><?php echo ($document["title"]); ?></a> </li><?php endforeach; endif; else: echo "" ;endif; endif; ?>
         </ul>
     </div>
 </div>
