@@ -51,7 +51,7 @@
     
 <div class="container-fluid">
     <div class="indexImg row">
-        <img src="./Public/Home/static/image/index.png" width="100%" />
+        <img src="./Public/Home/static/image/index.jpg" width="100%" />
     </div>
     <div class="serviceList text-center">
         <div class="container">

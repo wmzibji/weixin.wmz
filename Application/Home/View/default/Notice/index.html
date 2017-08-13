@@ -1,16 +1,26 @@
 <extend name="Base/base" />
 <block name="main">
-<div class="container">
-    <div class="blank"></div>
-    <div>
-        <h2>小区通知</h2>
-        <ul class="list-group fuwuList">
-            <notempty name="list">
-                <volist name="list" id="document">
-            <li class="list-group-item"><a href="{：U('Notice/detail')}" class="text-info"><span class="iconfont">&#xe60a;</span>{$document.title}</a> </li>
-                </volist>
-            </notempty>
-        </ul>
+<div class="container-fluid">
+    <h2>小区通知</h2>
+    <notempty name="list">
+        <volist name="list" id="document">
+    <div class="row noticeList">
+        <a href="{:U('Notice/detail?id='.$document['id'])}">
+            <div class="col-xs-2">
+                <img class="noticeImg" src="./Public/Home/static/image/1.png" />
+            </div>
+            <div class="col-xs-10">
+                <p class="title">{$document.title}</p>
+                <p class="intro">{$document.description}</p>
+                <p class="info">浏览: {$document.view} <span class="pull-right">{$document.create_time|date="y-m-d h:i:s",###}</span> </p>
+            </div>
+        </a>
     </div>
+        </volist>
+    </notempty>
 </div>
+
+
+
+
 </block>

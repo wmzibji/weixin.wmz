@@ -49,25 +49,16 @@
     
 
     
-<div class="container-fluid">
-    <h2>小区通知</h2>
-    <?php if(!empty($list)): if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$document): $mod = ($i % 2 );++$i;?><div class="row noticeList">
-        <a href="<?php echo U('Notice/detail?id='.$document['id']);?>">
-            <div class="col-xs-2">
-                <img class="noticeImg" src="./Public/Home/static/image/1.png" />
-            </div>
-            <div class="col-xs-10">
-                <p class="title"><?php echo ($document["title"]); ?></p>
-                <p class="intro"><?php echo ($document["description"]); ?></p>
-                <p class="info">浏览: <?php echo ($document["view"]); ?> <span class="pull-right"><?php echo (date("y-m-d h:i:s",$document["create_time"])); ?></span> </p>
-            </div>
-        </a>
-    </div><?php endforeach; endif; else: echo "" ;endif; endif; ?>
-</div>
 
-
-
-
+    <div class="container-fluid">
+        <?php if(!empty($list)): if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$document): $mod = ($i % 2 );++$i;?><div class="blank"></div>
+        <h3 class="noticeDetailTitle"><strong><?php echo ($document["title"]); ?></strong></h3>
+        <div class="noticeDetailInfo"><?php echo ($document["name"]); ?></div>
+        <div class="noticeDetailInfo"><?php echo (date("y-m-d h:i:s",$document["create_time"])); ?></div>
+        <div class="noticeDetailContent">
+            <?php echo ($document["content"]); ?>
+        </div><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+    </div>
 
 </div>
 
