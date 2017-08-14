@@ -9,7 +9,6 @@
 
 namespace Home\Controller;
 use User\Api\UserApi;
-
 /**
  * 用户控制器
  * 包括用户中心，用户登录及注册

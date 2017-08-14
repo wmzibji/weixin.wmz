@@ -99,6 +99,52 @@ return array(
     'HTML_FILE_SUFFIX'  =>    '.html', // 设置静态缓存文件后缀
     'HTML_CACHE_RULES'  =>     array(  // 定义静态缓存规则
         // 定义格式1 数组方式
-        'User:login'    =>     array('{:module}/{:controller}_{:action}', '600'),
-    )
+    'User:login'    =>     array('{:module}/{:controller}_{:action}', '600'),
+    ),
+    //微信SDK配置
+    'wechat' =>[
+        'debug'  => true,
+        'app_id' => 'wx1e2911c6fed8e3e6',
+        'secret' => '47b9d2abcada79d623ca2756552f9bb5',
+        'token'  => 'wmzibji',
+        // 'aes_key' => null, // 可选
+        'log' => [
+            'level' => 'debug',
+            'permission' => 0777,
+            'file'  => 'www/wwwroot/weixin.wmz/easywechat.log', // XXX: 绝对路径！！！！
+        ],
+        /**
+         * OAuth 配置
+         *
+         * scopes：公众平台（snsapi_userinfo / snsapi_base），开放平台：snsapi_login
+         * callback：OAuth授权完成后的回调页地址
+         */
+        'oauth' => [
+            'scopes'   => ['snsapi_userinfo'],
+            'callback' => 'index.php?s=/Home/Wechat/callback',
+        ],
+        /**
+         * 微信支付
+         */
+        'payment' => [
+            'merchant_id'        => 'your-mch-id',
+            'key'                => 'key-for-signature',
+            'cert_path'          => 'path/to/your/cert.pem', // XXX: 绝对路径！！！！
+            'key_path'           => 'path/to/your/key',      // XXX: 绝对路径！！！！
+            // 'device_info'     => '013467007045764',
+            // 'sub_app_id'      => '',
+            // 'sub_merchant_id' => '',
+            // ...
+        ],
+        /**
+         * Guzzle 全局设置
+         *
+         * 更多请参考： http://docs.guzzlephp.org/en/latest/request-options.html
+         */
+        /*'guzzle' => [
+            'timeout' => 3.0, // 超时时间（秒）
+            //'verify' => false, // 关掉 SSL 认证（强烈不建议！！！）
+        ],*/
+    ],
+
 );
