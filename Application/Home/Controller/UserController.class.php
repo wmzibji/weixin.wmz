@@ -15,122 +15,137 @@ use User\Api\UserApi;
  */
 class UserController extends HomeController {
 
-	/* 用户中心首页 */
-	public function index(){
+    /* 用户中心首页 */
+    public function index(){
         if ( !is_login() ) {
-            $this->redirect( 'User/login');
+            if(!SESSION('open_id')){
+
+                $this->redirect( 'User/login');
+            }
         }
-        $id=
-        $user=M('UcenterMember')->where(['id'=>1])->select();
+        //保存用户数据
+        $time=time();
+        $ip=session('user_ip');
+        $user=session('wechat_user');
+        $sql = "insert into member(nickname,reg_ip,reg_time,login,last_login_ip,last_login_time,status,open_id) VALUES ('{$user["name"]}','{$ip}','{$time}',1,'{$ip}','{$time}',1,'{$user["id"]}') ON  DUPLICATE KEY UPDATE last_login_ip='{$ip}',last_login_time='{$time}',login=login+1";
+        M()->execute($sql);
+        //展示用户
+        $id=session('wechat_user')['id'];
+        $user=M('member')->where(['open_id'=>$id])->select();
         $this->assign('user',$user);
         $this->display();
 
-	}
+    }
 
-	/* 注册页面 */
-	public function register($username = '', $password = '', $repassword = '', $email = '', $verify = ''){
+    /* 注册页面 */
+    public function register($username = '', $password = '', $repassword = '', $email = '', $verify = ''){
         if(!C('USER_ALLOW_REGISTER')){
             $this->error('注册已关闭');
         }
-		if(IS_POST){ //注册用户
-			/* 检测验证码 */
-			if(!check_verify($verify)){
-				$this->error('验证码输入错误！');
-			}
+        if(IS_POST){ //注册用户
+            /* 检测验证码 */
+            if(!check_verify($verify)){
+                $this->error('验证码输入错误！');
+            }
 
-			/* 检测密码 */
-			if($password != $repassword){
-				$this->error('密码和重复密码不一致！');
-			}			
+            /* 检测密码 */
+            if($password != $repassword){
+                $this->error('密码和重复密码不一致！');
+            }
 
-			/* 调用注册接口注册用户 */
+            /* 调用注册接口注册用户 */
             $User = new UserApi;
-			$uid = $User->register($username, $password, $email);
-			if(0 < $uid){ //注册成功
-				//TODO: 发送验证邮件
-				$this->success('注册成功！',U('login'));
-			} else { //注册失败，显示错误信息
-				$this->error($this->showRegError($uid));
-			}
+            $uid = $User->register($username, $password, $email);
+            if(0 < $uid){ //注册成功
+                //TODO: 发送验证邮件
+                $this->success('注册成功！',U('login'));
+            } else { //注册失败，显示错误信息
+                $this->error($this->showRegError($uid));
+            }
 
-		} else { //显示注册表单
-			$this->display();
-		}
-	}
+        } else { //显示注册表单
+            $this->display();
+        }
+    }
 
-	/* 登录页面 */
-	public function login($username = '', $password = '', $verify = ''){
-		if(IS_POST){ //登录验证
-			/* 检测验证码 */
-			if(!check_verify($verify)){
-				$this->error('验证码输入错误！');
-			}
+    /* 登录页面 */
+    public function login($username = '', $password = '', $verify = ''){
+        if(IS_POST){ //登录验证
+            /* 检测验证码 */
+            if(!check_verify($verify)){
+                $this->error('验证码输入错误！');
+            }
 
-			/* 调用UC登录接口登录 */
-			$user = new UserApi;
-			$uid = $user->login($username, $password);
-			if(0 < $uid){ //UC登录成功
-				/* 登录用户 */
-				$Member = D('Member');
-				if($Member->login($uid)){ //登录用户
-					//TODO:跳转到登录前页面
-					$this->success('登录成功！',U('Home/Index/index'));
-				} else {
-					$this->error($Member->getError());
-				}
+            /* 调用UC登录接口登录 */
+            $user = new UserApi;
+            $uid = $user->login($username, $password);
+            if(0 < $uid){ //UC登录成功
+                /* 登录用户 */
+                $Member = D('Member');
+                if($Member->login($uid)){ //登录用户
+                    //将open_id和用户绑定
+                    $Member->where(['uid'=>$uid])->data([
+                        'open_id'=>session('open_id'),
+                        'nickname'=>session('user')["name"],
+                    ])->save();
+                    //TODO:跳转到登录前页面
+                    $this->success('登录成功！',U('Home/Index/index'));
+                } else {
+                    $this->error($Member->getError());
+                }
 
-			} else { //登录失败
-				switch($uid) {
-					case -1: $error = '用户不存在或被禁用！'; break; //系统级别禁用
-					case -2: $error = '密码错误！'; break;
-					default: $error = '未知错误！'; break; // 0-接口参数错误（调试阶段使用）
-				}
-				$this->error($error);
-			}
+            } else { //登录失败
+                switch($uid) {
+                    case -1: $error = '用户不存在或被禁用！'; break; //系统级别禁用
+                    case -2: $error = '密码错误！'; break;
+                    default: $error = '未知错误！'; break; // 0-接口参数错误（调试阶段使用）
+                }
+                $this->error($error);
+            }
 
-		} else { //显示登录表单
-			$this->display();
-		}
-	}
+        } else { //显示登录表单
+            $this->display();
+        }
+    }
 
-	/* 退出登录 */
-	public function logout(){
-		if(is_login()){
-			D('Member')->logout();
-			$this->success('退出成功！', U('User/login'));
-		} else {
-			$this->redirect('User/login');
-		}
-	}
+    /* 退出登录 */
+    public function logout(){
+        if(is_login()){
+            D('Member')->logout();
+            $this->success('退出成功！', U('User/login'));
+        } else {
+            $this->redirect('User/login');
+        }
+    }
 
-	/* 验证码，用于登录和注册 */
-	public function verify(){
-		$verify = new \Think\Verify();
-		$verify->entry(1);
-	}
+    /* 验证码，用于登录和注册 */
+    public function verify(){
+        $verify = new \Think\Verify();
+        $verify->entry(1);
+    }
 
-	/**
-	 * 获取用户注册错误信息
-	 * @param  integer $code 错误编码
-	 * @return string        错误信息
-	 */
-	private function showRegError($code = 0){
-		switch ($code) {
-			case -1:  $error = '用户名长度必须在16个字符以内！'; break;
-			case -2:  $error = '用户名被禁止注册！'; break;
-			case -3:  $error = '用户名被占用！'; break;
-			case -4:  $error = '密码长度必须在6-30个字符之间！'; break;
-			case -5:  $error = '邮箱格式不正确！'; break;
-			case -6:  $error = '邮箱长度必须在1-32个字符之间！'; break;
-			case -7:  $error = '邮箱被禁止注册！'; break;
-			case -8:  $error = '邮箱被占用！'; break;
-			case -9:  $error = '手机格式不正确！'; break;
-			case -10: $error = '手机被禁止注册！'; break;
-			case -11: $error = '手机号被占用！'; break;
-			default:  $error = '未知错误';
-		}
-		return $error;
-	}
+    /**
+     * 获取用户注册错误信息
+     * @param  integer $code 错误编码
+     * @return string        错误信息
+     */
+    private function showRegError($code = 0){
+        switch ($code) {
+            case -1:  $error = '用户名长度必须在16个字符以内！'; break;
+            case -2:  $error = '用户名被禁止注册！'; break;
+            case -3:  $error = '用户名被占用！'; break;
+            case -4:  $error = '密码长度必须在6-30个字符之间！'; break;
+            case -5:  $error = '邮箱格式不正确！'; break;
+            case -6:  $error = '邮箱长度必须在1-32个字符之间！'; break;
+            case -7:  $error = '邮箱被禁止注册！'; break;
+            case -8:  $error = '邮箱被占用！'; break;
+            case -9:  $error = '手机格式不正确！'; break;
+            case -10: $error = '手机被禁止注册！'; break;
+            case -11: $error = '手机号被占用！'; break;
+            default:  $error = '未知错误';
+        }
+        return $error;
+    }
 
 
     /**
@@ -138,9 +153,9 @@ class UserController extends HomeController {
      * @author huajie <banhuajie@163.com>
      */
     public function profile(){
-		if ( !is_login() ) {
-			$this->error( '您还没有登陆',U('User/login') );
-		}
+        if ( !is_login() ) {
+            $this->error( '您还没有登陆',U('User/login') );
+        }
         if ( IS_POST ) {
             //获取参数
             $uid        =   is_login();
